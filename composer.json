@@ -1,0 +1,8 @@
+{
+    "name": "ihorchyshkala/relativepath",
+    "type": "october-plugin",
+    "description": "filter returns a relative file path without domain and protocol, to the asset specified in the filter parameter.",
+    "require": {
+        "composer/installers": "~1.0"
+    }
+}
