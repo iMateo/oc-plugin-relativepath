@@ -48,16 +48,13 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function getrelativePath($path = '')
+    public function getRelativePath(string $path = ''): string
     {   
-        
-        $themeDir = Theme::getActiveTheme()->getDirName();
-
-        $url = Config::get('cms.themesPath', '/themes').'/'.$themeDir;
-
-        $url .= '/'.$path;
-
-        return $url;
+        return sprintf('%s/%s/%s', 
+                       Config::get('cms.themesPath', '/themes'), 
+                       Theme::getActiveTheme()->getDirName(), 
+                       $path
+              );
     }
 
 }
